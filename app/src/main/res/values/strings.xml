@@ -1,0 +1,11 @@
+<resources>
+    <string name="HapoelAshkelon">הפועל אשקלון</string>
+    <string name="app_name">הפועל אשקלון אינפו</string>
+    <string name="news">חדשות</string>
+    <string name="squad">סגל</string>
+    <string name="matches">משחקים</string>
+    <string name="next_match_label">המשחק הבא</string>
+    <string name="next_match_stadium_default">אצטדיון גרונדמן, רמת השרון</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

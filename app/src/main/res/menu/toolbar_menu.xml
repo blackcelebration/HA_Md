@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item android:id="@+id/news_menu"
+        android:title="@string/news"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/squad_menu"
+        android:title="@string/squad"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/matches_menu"
+        android:title="@string/matches"
+        android:orderInCategory="300"
+        app:showAsAction="never" />
+</menu>

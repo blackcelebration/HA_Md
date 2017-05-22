@@ -1,0 +1,9 @@
+<resources>
+    <string name ="search1">אשקלון</string>
+    <string name ="search2">נעים</string>
+    <string name ="search3"></string>
+    <string name ="apikey">21a15ab7-beb2-4e1c-8035-cb0043564f6b</string>
+    <string name="results_source1">http://www.livefootball.com/football/israel/winner-league/results/all/</string>
+    <string name="results_source2">http://www.livefootball.com/football/israel/winner-league-relegation/results/all/</string>
+    <string name="fixtures_source">http://www.livefootball.com/football/israel/winner-league-relegation/fixtures/all/</string>
+</resources>
