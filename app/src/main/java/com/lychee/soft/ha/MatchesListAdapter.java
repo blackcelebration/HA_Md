@@ -31,7 +31,6 @@ import static android.support.v4.content.ContextCompat.getColor;
 public class MatchesListAdapter extends BaseAdapter {
 
     private final Context mContext;
-    private Date nextMatchDate;
     private List<Match> mMatches = new ArrayList<Match>();
     DateFormat dateFormat;
 
@@ -46,8 +45,6 @@ public class MatchesListAdapter extends BaseAdapter {
 
     public void SetMatchesList(List<Match> matches,int nextMatch){
         mMatches = matches;
-        if (mMatches !=null && mMatches.size()>0)
-           nextMatchDate = mMatches.get(nextMatch).getDate();
     }
 
     @Override
