@@ -11,8 +11,8 @@ android {
         compileSdkVersion = 25
         buildToolsVersion = "25"
        // supportLibraryVersion = "25.0.0"
-        versionCode 5
-        versionName "1.0.4"
+        versionCode 6
+        versionName "1.0.5"
     }
     buildTypes {
         release {
