@@ -57,7 +57,7 @@ public class HaDbHelper extends SQLiteOpenHelper {
         }
         this.context = context;
         try {
-         // create(true); // needed for upgrading db
+        //  create(true); // needed for upgrading db
 
           create(false);
           fmt = new SimpleDateFormat("dd MMMM yyyy", Locale.US);
@@ -566,6 +566,41 @@ public class HaDbHelper extends SQLiteOpenHelper {
                 db.close();
         }
 
+    }
+
+    public boolean deleteOldResults(){
+        boolean closeDb = false;
+        try {
+            String queryDeleteDate;
+            DateFormat sd = new SimpleDateFormat("MM");
+            String month = sd.format(new Date());
+            sd = new SimpleDateFormat("YYYY");
+            String year = sd.format(new Date());
+            //current season may still be running - previous season matches must be deleted (if present)
+            if (Integer.valueOf(month) < 7)
+                queryDeleteDate = String.valueOf(Integer.valueOf(year)-1)+"-08-01";
+            else
+                queryDeleteDate = year+"-08-01";
+
+
+            String strDateQuery = "SELECT MAX(Date) FROM Matches WHERE Date <= '" + queryDeleteDate + "'";
+            if (db==null || !db.isOpen()) {
+                db = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME, null, SQLiteDatabase.OPEN_READONLY);
+                closeDb = true;
+            }
+            Cursor cursor = db.rawQuery(strDateQuery, null);
+            if (cursor.getCount()>0)
+                db.execSQL("DELETE FROM Matches WHERE Date <= '" + queryDeleteDate + "'");
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (closeDb)
+                db.close();
+        }
+        return true;
     }
 
     public static int getCurrentTimezoneOffset() {

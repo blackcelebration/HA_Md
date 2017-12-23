@@ -40,6 +40,7 @@ public class MatchesLoad {
 
     public void syncResults(String teamEngName){
         dbHelper.openDb(false);
+        boolean bOld = dbHelper.deleteOldResults();
         Date lastUpdate = dbHelper.getMatchesLastUpdate();
         Date lastResult = dbHelper.getLastResultDate();
         Log.d("SyncResults","SyncResults2");
@@ -309,5 +310,9 @@ public class MatchesLoad {
 
         for (int i=0;i<resultsRelegation.size();i++)
             results.add(resultsRelegation.get(i));
+    }
+
+    private void deleteOldResults(){
+
     }
 }

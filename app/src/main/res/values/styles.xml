@@ -9,6 +9,8 @@
         <item name="android:textViewStyle">@style/AssistantTextViewStyle</item>
         <item name="android:buttonStyle">@style/AssistantButtonStyle</item>
         <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large</item>
+        <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small</item>
     </style>
 
     <style name="AssistantTextViewStyle" parent="android:Widget.TextView">
@@ -19,7 +21,11 @@
         <item name="android:fontFamily">Assistant-SemiBold</item>
     </style>
 
-    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+    <style name="PopupMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+
+    <style name="PopupMenu1" parent="@android:style/Widget.PopupMenu">
         <item name="android:popupBackground">@android:color/white</item>
     </style>
 
@@ -36,4 +42,6 @@
         <item name="colorButtonNormal">@color/light_orange</item>
         <item name="android:textColor">@color/white</item>
     </style>
+
+
 </resources>

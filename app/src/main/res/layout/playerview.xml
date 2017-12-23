@@ -31,7 +31,6 @@
                 android:layout_marginRight="15dp"
                 android:background="@color/gray"
                 android:scaleType="centerCrop"
-                android:src="@drawable/izrin"
                 android:focusable="false"/>
         <TextView
             android:id="@+id/playername"

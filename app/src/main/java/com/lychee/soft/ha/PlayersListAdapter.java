@@ -140,6 +140,7 @@ public class PlayersListAdapter extends BaseAdapter {
             viewholder.teamsButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
                         PopupWindow popupWindow = new PopupWindow(mContext);
                         popupWindow.setFocusable(true);
 
